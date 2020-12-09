@@ -1,0 +1,6 @@
+module Pods_nif_app_nif_appTests {
+  umbrella header "Pods-nif_app-nif_appTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
