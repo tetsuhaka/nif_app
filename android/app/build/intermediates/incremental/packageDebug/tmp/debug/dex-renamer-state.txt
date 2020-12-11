@@ -1,4 +1,4 @@
-#Wed Dec 09 18:27:27 JST 2020
+#Fri Dec 11 13:10:53 JST 2020
 base.0=/Users/human/20mh214suzuki/NIF/nif_app/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

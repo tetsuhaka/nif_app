@@ -11,12 +11,11 @@ import {
 export default class Time extends Component {
   render(){  
     return (
-        <View style = {{flex:1}}>
-            <View style = {{height:5}}/>
-            <Text style={styles.timeText}>6:00</Text>
-            <Text style={styles.timeText}>7:00</Text>
-            <Text style={styles.timeText}>8:00</Text>
-            <Text style={styles.timeText}>9:00</Text>
+        <View style = {{flex:1.2}}>
+            <Text style={styles.timeText}>06:00</Text>
+            <Text style={styles.timeText}>07:00</Text>
+            <Text style={styles.timeText}>08:00</Text>
+            <Text style={styles.timeText}>09:00</Text>
             <Text style={styles.timeText}>10:00</Text>
             <Text style={styles.timeText}>11:00</Text>
             <Text style={styles.timeText}>12:00</Text>
@@ -43,7 +42,7 @@ const styles = StyleSheet.create({
 
   timeText: {
     textAlign: "center",
-    fontSize: 30,
+    fontSize: 32,
     fontWeight: "bold"
   },
 

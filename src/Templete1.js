@@ -17,7 +17,8 @@ export default class Templete1 extends Component {
         pan: new Animated.ValueXY(),
         opacity: new Animated.Value(1), 
         color: "red",
-        schedule: "お風呂"
+        schedule: "お風呂",
+        
       };
     }
   
@@ -25,6 +26,11 @@ export default class Templete1 extends Component {
       const {
         changeBox1,
         changeBox2,
+        changeBox3,
+        changeBox4,
+        changeBox5,
+        changeBox6,
+        changeBox7,
       } = this.props;
       this._val = { x:0, y:0 }
       this.state.pan.addListener((value) => this._val = value);
@@ -53,7 +59,37 @@ export default class Templete1 extends Component {
                 this.state.pan, 
                 {toValue:{x:0,y:0}} 
                ).start(); 
-            } else{
+            } else if (this.isDropArea3(gesture)){
+              changeBox3(this.state.color,this.state.schedule);
+              Animated.spring(
+                this.state.pan, 
+                {toValue:{x:0,y:0}} 
+               ).start(); 
+            } else if (this.isDropArea4(gesture)){
+              changeBox4(this.state.color,this.state.schedule);
+              Animated.spring(
+                this.state.pan, 
+                {toValue:{x:0,y:0}} 
+               ).start(); 
+            } else if (this.isDropArea5(gesture)){
+              changeBox5(this.state.color,this.state.schedule);
+              Animated.spring(
+                this.state.pan, 
+                {toValue:{x:0,y:0}} 
+               ).start(); 
+            } else if (this.isDropArea6(gesture)){
+              changeBox6(this.state.color,this.state.schedule);
+              Animated.spring(
+                this.state.pan, 
+                {toValue:{x:0,y:0}} 
+               ).start(); 
+            } else if (this.isDropArea7(gesture)){
+              changeBox7(this.state.color,this.state.schedule);
+              Animated.spring(
+                this.state.pan, 
+                {toValue:{x:0,y:0}} 
+               ).start(); 
+              }else{
               Animated.spring(
                 this.state.pan, 
                 {toValue:{x:0,y:0}} 
@@ -65,12 +101,33 @@ export default class Templete1 extends Component {
     }
     isDropArea1(gesture) {
       const windowHeight = Dimensions.get('window').height; 
-      return gesture.moveY < (windowHeight /11 * 2 + 30+30) && gesture.moveY > (windowHeight /11 * 2 + 30);
+      return gesture.moveY < (windowHeight /10 * 2 + 20 + 32) && gesture.moveY > (windowHeight /11 * 2 + 20);
     }
     isDropArea2(gesture) {
       const windowHeight = Dimensions.get('window').height; 
-      return gesture.moveY < (windowHeight /11 * 2 + 30+30+30) && gesture.moveY > (windowHeight /11 * 2 + 30+30);
+      return gesture.moveY < (windowHeight /10 * 2 + 20+ 32*2) && gesture.moveY > (windowHeight /11 * 2 + 20 + 32);
     }
+    isDropArea3(gesture) {
+      const windowHeight = Dimensions.get('window').height; 
+      return gesture.moveY < (windowHeight /10 * 2 + 20+ 32*3) && gesture.moveY > (windowHeight /11 * 2 + 20 + 32*2);
+    }
+    isDropArea4(gesture) {
+      const windowHeight = Dimensions.get('window').height; 
+      return gesture.moveY < (windowHeight /10 * 2 + 20+ 32*4) && gesture.moveY > (windowHeight /11 * 2 + 20 + 32*3);
+    }
+    isDropArea5(gesture) {
+      const windowHeight = Dimensions.get('window').height; 
+      return gesture.moveY < (windowHeight /10 * 2 + 20+ 32*5) && gesture.moveY > (windowHeight /11 * 2 + 20 + 32*4);
+    }
+    isDropArea6(gesture) {
+      const windowHeight = Dimensions.get('window').height; 
+      return gesture.moveY < (windowHeight /10 * 2 + 20+ 32*6) && gesture.moveY > (windowHeight /11 * 2 + 20 + 32*5);
+    }
+    isDropArea7(gesture) {
+      const windowHeight = Dimensions.get('window').height; 
+      return gesture.moveY < (windowHeight /10 * 2 + 20+ 32*7) && gesture.moveY > (windowHeight /11 * 2 + 20 + 32*6);
+    }
+
 
   
   
